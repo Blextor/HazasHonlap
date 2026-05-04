@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Statikus weboldal | Netlify starter</title>
+    <meta
+      name="description"
+      content="Gyors, tiszta, statikus weboldal Netlify deployhoz."
+    />
+    <meta name="theme-color" content="#111827" />
+
+    <meta property="og:title" content="Statikus weboldal" />
+    <meta
+      property="og:description"
+      content="Gyors, tiszta, statikus weboldal Netlify deployhoz."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ugrás a tartalomra</a>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Fő navigáció">
+        <a class="brand" href="/" aria-label="Kezdőlap">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Starter</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">Előnyök</a>
+          <a href="#process">Folyamat</a>
+          <a href="#contact">Kapcsolat</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Netlify-ready statikus oldal</p>
+          <h1>Gyors, egyszerű weboldal szerverüzemeltetés nélkül.</h1>
+          <p class="lead">
+            Ez egy tiszta alap repo statikus landing page-hez. Nincs backend,
+            nincs build-lépés, nincs kötelező JavaScript-framework.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#contact">Kezdjük el</a>
+            <a class="button secondary" href="#features">Részletek</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Deploy összefoglaló">
+          <div class="status-row">
+            <span class="status-dot"></span>
+            <span>Deploy-ready</span>
+          </div>
+          <dl class="metrics">
+            <div>
+              <dt>Build</dt>
+              <dd>0 lépés</dd>
+            </div>
+            <div>
+              <dt>Publish</dt>
+              <dd>public/</dd>
+            </div>
+            <div>
+              <dt>Hosting</dt>
+              <dd>Netlify</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Alapok</p>
+          <h2>Ami már benne van</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Reszponzív layout</h3>
+            <p>Mobilon és desktopon is használható alap landing page struktúra.</p>
+          </article>
+          <article class="card">
+            <h3>SEO alapok</h3>
+            <p>Title, description, Open Graph, sitemap és robots fájl.</p>
+          </article>
+          <article class="card">
+            <h3>Netlify konfiguráció</h3>
+            <p>Publikációs könyvtár, security headerek és asset cache beállítások.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="section split">
+        <div>
+          <p class="eyebrow">Deploy</p>
+          <h2>Így kerül ki élesbe</h2>
+        </div>
+        <ol class="steps">
+          <li>Tedd GitHub/GitLab/Bitbucket repóba.</li>
+          <li>Importáld a repót Netlify-ban.</li>
+          <li>A publish directory legyen <code>public</code>.</li>
+          <li>Push után Netlify automatikusan frissíti az oldalt.</li>
+        </ol>
+      </section>
+
+      <section id="contact" class="section contact-panel">
+        <div>
+          <p class="eyebrow">Következő lépés</p>
+          <h2>Cseréld ki a szövegeket a saját tartalmadra.</h2>
+          <p>
+            Ez a blokk lehet ajánlatkérés, kapcsolatfelvétel, termékbemutató
+            vagy portfólió belépőpont.
+          </p>
+        </div>
+        <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Saját márkanév. Minden jog fenntartva.</p>
+    </footer>
+  </body>
+</html>
