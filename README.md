@@ -1,65 +1,51 @@
-# Netlify Static Starter
+# Esküvői információs oldal – Netlify statikus starter
 
-Egy minimális, zero-build statikus weboldal Netlify deployhoz.
-
-## Struktúra
-
-```text
-.
-├── netlify.toml
-├── public/
-│   ├── index.html
-│   ├── 404.html
-│   ├── robots.txt
-│   ├── sitemap.xml
-│   ├── manifest.webmanifest
-│   └── assets/
-│       ├── css/styles.css
-│       ├── js/main.js
-│       └── img/favicon.svg
-└── README.md
-```
+Egyszerű, reszponzív, build nélküli statikus weboldal Netlify deployhoz.
 
 ## Netlify beállítás
-
-Netlify-n importáld a GitHub/GitLab/Bitbucket repót.
 
 - Build command: hagyd üresen
 - Publish directory: `public`
 
-A `netlify.toml` már tartalmazza a publish könyvtárat és néhány alap security/cache headert.
+## Gyors testreszabás
 
-## Lokális futtatás
+A fő tartalom itt található:
 
-Pythonnal:
-
-```bash
-cd public
-python3 -m http.server 8080
+```text
+public/index.html
 ```
 
-Majd nyisd meg:
+A legfontosabb cserélendő helyőrzők:
+
+- `Anna & Bence`
+- `2026. június 20.`
+- `https://forms.gle/IDE-JON-A-KERDOIV-LINKJE`
+- Helyszín, időpontok, kapcsolattartási adatok
+- `public/sitemap.xml` és `public/robots.txt` domain URL-je
+
+## Lokális megnyitás
+
+Nyisd meg a `public/index.html` fájlt böngészőben, vagy futtasd:
+
+```bash
+python3 -m http.server 8080 --directory public
+```
+
+Majd böngészőben:
 
 ```text
 http://localhost:8080
 ```
 
-Node nélkül is működik, nincs kötelező függőség.
-
-## Módosítandó részek élesítés előtt
-
-1. `public/index.html` — title, description, szövegek, linkek.
-2. `public/sitemap.xml` — cseréld a `https://example.netlify.app` URL-t a saját domainedre.
-3. `public/robots.txt` — cseréld a sitemap URL-t.
-4. `public/manifest.webmanifest` — app/site név.
-
-## Git indulás
+## Deploy
 
 ```bash
 git init
 git add .
-git commit -m "Initial static site"
+git commit -m "Initial wedding site"
 git branch -M main
 git remote add origin <SAJAT_REPO_URL>
 git push -u origin main
 ```
+
+Ezután Netlify-ben importáld a GitHub/GitLab/Bitbucket repót.

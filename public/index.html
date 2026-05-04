@@ -3,127 +3,255 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Statikus weboldal | Netlify starter</title>
+    <title>Anna & Bence esküvője</title>
     <meta
       name="description"
-      content="Gyors, tiszta, statikus weboldal Netlify deployhoz."
+      content="Esküvői információk: időpont, helyszín, program, utazás, szállás és vendégkérdőív."
     />
-    <meta name="theme-color" content="#111827" />
-
-    <meta property="og:title" content="Statikus weboldal" />
+    <meta name="theme-color" content="#6f5f52" />
+    <meta property="og:title" content="Anna & Bence esküvője" />
     <meta
       property="og:description"
-      content="Gyors, tiszta, statikus weboldal Netlify deployhoz."
+      content="Minden fontos információ az esküvőnkről egy helyen."
     />
     <meta property="og:type" content="website" />
-
     <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <script src="/assets/js/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Ugrás a tartalomra</a>
 
-    <header class="site-header">
-      <nav class="nav" aria-label="Fő navigáció">
-        <a class="brand" href="/" aria-label="Kezdőlap">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Starter</span>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Vissza az oldal tetejére">
+          <span class="brand-mark" aria-hidden="true">♥</span>
+          <span>Anna & Bence</span>
         </a>
-        <div class="nav-links">
-          <a href="#features">Előnyök</a>
-          <a href="#process">Folyamat</a>
-          <a href="#contact">Kapcsolat</a>
-        </div>
-      </nav>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menü
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Fő navigáció">
+          <a href="#informaciok">Információk</a>
+          <a href="#program">Program</a>
+          <a href="#utazas">Utazás</a>
+          <a href="#kerdoiv">Kérdőív</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <section class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">Netlify-ready statikus oldal</p>
-          <h1>Gyors, egyszerű weboldal szerverüzemeltetés nélkül.</h1>
-          <p class="lead">
-            Ez egy tiszta alap repo statikus landing page-hez. Nincs backend,
-            nincs build-lépés, nincs kötelező JavaScript-framework.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="#contact">Kezdjük el</a>
-            <a class="button secondary" href="#features">Részletek</a>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Szeretettel meghívunk</p>
+            <h1 id="hero-title">Anna & Bence esküvője</h1>
+            <p class="hero-lead">
+              2026. június 20-án összeházasodunk. Ezen az oldalon összegyűjtöttünk
+              minden fontos tudnivalót a napról.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#kerdoiv">Kérdőív kitöltése</a>
+              <a class="button secondary" href="#program">Program megtekintése</a>
+            </div>
+          </div>
+
+          <aside class="date-card" aria-label="Esküvő dátuma és helyszíne">
+            <span class="date-card-label">Esküvő napja</span>
+            <strong>2026. június 20.</strong>
+            <span>szombat</span>
+            <hr />
+            <span class="date-card-label">Helyszín</span>
+            <strong>Villa Harmónia</strong>
+            <span>1234 Példaváros, Fő utca 12.</span>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="informaciok">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Alapinformációk</p>
+            <h2>Fontos tudnivalók</h2>
+            <p>
+              Ide kerülnek azok az információk, amelyeket minden vendégnek érdemes
+              gyorsan megtalálnia telefonról is.
+            </p>
+          </div>
+
+          <div class="cards three-columns">
+            <article class="card">
+              <h3>Szertartás</h3>
+              <p>
+                A polgári szertartás 15:30-kor kezdődik a helyszín kertjében.
+                Kérjük, érkezzetek legalább 20 perccel korábban.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Vacsora</h3>
+              <p>
+                A vacsora 18:00-kor kezdődik. A kérdőívben jelezhetitek az ételallergiát,
+                érzékenységet vagy speciális étrendet.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Dress code</h3>
+              <p>
+                Elegáns, kényelmes öltözetet javaslunk. A szertartás kültéren lesz,
+                ezért stabil cipő hasznos lehet.
+              </p>
+            </article>
           </div>
         </div>
-        <div class="hero-card" aria-label="Deploy összefoglaló">
-          <div class="status-row">
-            <span class="status-dot"></span>
-            <span>Deploy-ready</span>
+      </section>
+
+      <section class="section alt" id="program">
+        <div class="container narrow">
+          <div class="section-heading centered">
+            <p class="eyebrow">Menetrend</p>
+            <h2>A nap programja</h2>
           </div>
-          <dl class="metrics">
-            <div>
-              <dt>Build</dt>
-              <dd>0 lépés</dd>
+
+          <div class="timeline" aria-label="Esküvői program időrendben">
+            <div class="timeline-item">
+              <time datetime="2026-06-20T15:00">15:00</time>
+              <div>
+                <h3>Vendégvárás</h3>
+                <p>Érkezés, frissítők, rövid beszélgetés.</p>
+              </div>
             </div>
-            <div>
-              <dt>Publish</dt>
-              <dd>public/</dd>
+            <div class="timeline-item">
+              <time datetime="2026-06-20T15:30">15:30</time>
+              <div>
+                <h3>Szertartás</h3>
+                <p>Polgári szertartás a kertben.</p>
+              </div>
             </div>
-            <div>
-              <dt>Hosting</dt>
-              <dd>Netlify</dd>
+            <div class="timeline-item">
+              <time datetime="2026-06-20T17:00">17:00</time>
+              <div>
+                <h3>Fotózás és gratuláció</h3>
+                <p>Csoportképek, gratuláció, kötetlen vendéglátás.</p>
+              </div>
             </div>
-          </dl>
+            <div class="timeline-item">
+              <time datetime="2026-06-20T18:00">18:00</time>
+              <div>
+                <h3>Vacsora</h3>
+                <p>Ültetett vacsora, beszédek, torta.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-06-20T21:00">21:00</time>
+              <div>
+                <h3>Buli</h3>
+                <p>Zene, tánc és ünneplés késő estig.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="features" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Alapok</p>
-          <h2>Ami már benne van</h2>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Reszponzív layout</h3>
-            <p>Mobilon és desktopon is használható alap landing page struktúra.</p>
-          </article>
-          <article class="card">
-            <h3>SEO alapok</h3>
-            <p>Title, description, Open Graph, sitemap és robots fájl.</p>
-          </article>
-          <article class="card">
-            <h3>Netlify konfiguráció</h3>
-            <p>Publikációs könyvtár, security headerek és asset cache beállítások.</p>
-          </article>
+      <section class="section" id="utazas">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Megközelítés</p>
+            <h2>Utazás és szállás</h2>
+            <p>
+              A helyszín autóval és tömegközlekedéssel is megközelíthető. Parkolás a
+              helyszín mellett kijelölt parkolóban lesz.
+            </p>
+            <p>
+              Szállásfoglaláshoz néhány közeli opciót később itt tüntetünk fel. Ha
+              segítségre van szükségetek, jelezzétek a kérdőívben.
+            </p>
+          </div>
+
+          <div class="info-box">
+            <h3>Cím</h3>
+            <p id="venue-address">Villa Harmónia, 1234 Példaváros, Fő utca 12.</p>
+            <div class="button-row">
+              <a
+                class="button secondary"
+                href="https://www.google.com/maps/search/?api=1&query=Villa%20Harm%C3%B3nia%2C%201234%20P%C3%A9ldav%C3%A1ros%2C%20F%C5%91%20utca%2012"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Megnyitás térképen</a>
+              <button class="button ghost" type="button" data-copy="#venue-address">
+                Cím másolása
+              </button>
+            </div>
+            <p class="copy-status" aria-live="polite" data-copy-status></p>
+          </div>
         </div>
       </section>
 
-      <section id="process" class="section split">
-        <div>
-          <p class="eyebrow">Deploy</p>
-          <h2>Így kerül ki élesbe</h2>
-        </div>
-        <ol class="steps">
-          <li>Tedd GitHub/GitLab/Bitbucket repóba.</li>
-          <li>Importáld a repót Netlify-ban.</li>
-          <li>A publish directory legyen <code>public</code>.</li>
-          <li>Push után Netlify automatikusan frissíti az oldalt.</li>
-        </ol>
-      </section>
-
-      <section id="contact" class="section contact-panel">
-        <div>
-          <p class="eyebrow">Következő lépés</p>
-          <h2>Cseréld ki a szövegeket a saját tartalmadra.</h2>
+      <section class="section compact alt">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Ajándék</p>
+            <h2>Ajándékozás</h2>
+          </div>
           <p>
-            Ez a blokk lehet ajánlatkérés, kapcsolatfelvétel, termékbemutató
-            vagy portfólió belépőpont.
+            A legnagyobb ajándék, hogy velünk ünnepeltek. Ha mégis szeretnétek
+            hozzájárulni a közös életünk kezdetéhez, borítékos ajándéknak örülünk.
           </p>
         </div>
-        <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+      </section>
+
+      <section class="section" id="kerdoiv">
+        <div class="container questionnaire">
+          <div class="questionnaire-card">
+            <p class="eyebrow">Visszajelzés</p>
+            <h2>Kérjük, töltsétek ki a vendégkérdőívet</h2>
+            <p>
+              A kérdőív segít nekünk pontosítani a létszámot, az étkezési igényeket,
+              az esetleges szállásigényt és a fontos szervezési részleteket.
+            </p>
+            <p class="deadline">
+              Kérjük, lehetőség szerint <strong>2026. május 15-ig</strong> válaszoljatok.
+            </p>
+            <a
+              class="button primary large"
+              href="https://forms.gle/IDE-JON-A-KERDOIV-LINKJE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Google kérdőív megnyitása</a>
+            <p class="small-note">
+              A fenti linket cseréljétek ki a saját Google Forms vagy Google Docs kérdőív linketekre.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section">
+        <div class="container contact-card">
+          <div>
+            <p class="eyebrow">Kapcsolat</p>
+            <h2>Kérdésetek van?</h2>
+            <p>
+              Írjatok nekünk bátran, ha valamelyik információ nem egyértelmű, vagy
+              külön egyeztetésre van szükség.
+            </p>
+          </div>
+          <a class="button secondary" href="mailto:anna.bence@example.com">
+            anna.bence@example.com
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Saját márkanév. Minden jog fenntartva.</p>
+      <div class="container footer-inner">
+        <p>Anna & Bence · 2026</p>
+        <a href="#top">Vissza a tetejére</a>
+      </div>
     </footer>
+
+    <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

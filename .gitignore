@@ -1,14 +1,6 @@
-# OS / editor
 .DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Local tooling
 node_modules/
+dist/
+build/
 .netlify/
 .env
-.env.*
