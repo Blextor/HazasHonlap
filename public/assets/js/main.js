@@ -27,9 +27,9 @@ if (copyButton && copyStatus) {
 
     try {
       await navigator.clipboard.writeText(text);
-      copyStatus.textContent = 'A cím vágólapra másolva.';
+      copyStatus.textContent = 'A helyszín vágólapra másolva.';
     } catch {
-      copyStatus.textContent = 'Nem sikerült automatikusan másolni. Jelöld ki kézzel a címet.';
+      copyStatus.textContent = 'Nem sikerült automatikusan másolni. Jelöld ki kézzel a helyszínt.';
     }
   });
 }

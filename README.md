@@ -1,4 +1,4 @@
-# Esküvői információs oldal – Netlify statikus starter
+# Brigitta és Boldizsár esküvői információs oldala
 
 Egyszerű, reszponzív, build nélküli statikus weboldal Netlify deployhoz.
 
@@ -7,7 +7,16 @@ Egyszerű, reszponzív, build nélküli statikus weboldal Netlify deployhoz.
 - Build command: hagyd üresen
 - Publish directory: `public`
 
-## Gyors testreszabás
+## Már beállított adatok
+
+- Pár neve: Brigitta & Boldizsár
+- Dátum: 2026. szeptember 12.
+- Fő helyszín: Wedding Lake, Budapest XXIII. kerület
+- Fő helyszín Google Térkép linkje: `https://maps.app.goo.gl/hK9Usn7z4yHuk33p9`
+- Parkolási/bejutási pont: `https://maps.app.goo.gl/C3rP7tR8NgEwPFqRA`
+- Parkolás: 50+ parkolóhely
+
+## Még cserélendő helyőrzők
 
 A fő tartalom itt található:
 
@@ -15,12 +24,12 @@ A fő tartalom itt található:
 public/index.html
 ```
 
-A legfontosabb cserélendő helyőrzők:
+Keresd ezeket:
 
-- `Anna & Bence`
-- `2026. június 20.`
-- `https://forms.gle/IDE-JON-A-KERDOIV-LINKJE`
-- Helyszín, időpontok, kapcsolattartási adatok
+- `https://forms.gle/IDE-JON-A-KERDOIV-LINKJE` – Google Forms vagy Google Docs kérdőív linkje
+- `email@example.com` – kapcsolattartó e-mail-cím
+- egyházi esküvő pontos helyszíne és időpontja, ha meglesz
+- részletes programidőpontok, ha meglesznek
 - `public/sitemap.xml` és `public/robots.txt` domain URL-je
 
 ## Lokális megnyitás
