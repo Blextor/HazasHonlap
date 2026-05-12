@@ -58,3 +58,14 @@ git push -u origin main
 ```
 
 Ezután Netlify-ben importáld a GitHub/GitLab/Bitbucket repót.
+
+
+## Még cserélendő helyőrzők
+
+Az `public/index.html` fájlban cseréld ki ezeket a saját végleges adatokra:
+
+- `brigitta@email.hu`
+- `boldizsar@email.hu`
+- `+36 XX XXX XXXX`
+- `https://forms.gle/IDE-JON-A-KERDOIV-LINKJE`
+
