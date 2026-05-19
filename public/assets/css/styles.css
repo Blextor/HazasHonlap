@@ -164,18 +164,32 @@ a {
 }
 
 .hero-copy h1 {
+  display: grid;
+  gap: 0.04em;
   max-width: 740px;
   margin: 0;
   font-size: clamp(3rem, 8vw, 6.8rem);
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.hero-copy h1 span {
+  display: block;
+}
+
+.hero-lead,
+.hero-note {
+  max-width: 650px;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--color-muted);
 }
 
 .hero-lead {
-  max-width: 650px;
   margin: 28px 0 0;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  color: var(--color-muted);
+}
+
+.hero-note {
+  margin: 16px 0 0;
 }
 
 .eyebrow {
@@ -234,6 +248,12 @@ a {
   border-color: var(--color-border);
 }
 
+.button.waze {
+  background: linear-gradient(135deg, #e2f8ff, #c8f0ff);
+  color: #1d3d4a;
+  border-color: rgba(40, 153, 190, 0.42);
+}
+
 .button.large {
   min-height: 54px;
   padding-inline: 24px;
@@ -242,6 +262,7 @@ a {
 .date-card,
 .info-box,
 .card,
+.parking-panel,
 .questionnaire-card,
 .contact-card {
   background: rgba(255, 255, 255, 0.86);
@@ -252,14 +273,21 @@ a {
 
 .date-card {
   display: grid;
-  gap: 8px;
-  padding: 34px;
+  gap: 7px;
+  padding: 30px;
   border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(249, 246, 255, 0.94) 52%, rgba(243, 250, 255, 0.92));
+  border-color: rgba(104, 79, 120, 0.16);
+  box-shadow:
+    0 24px 72px rgba(48, 39, 60, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
 }
 
 .date-card strong {
   font-size: clamp(1.45rem, 3vw, 2rem);
   line-height: 1.1;
+  overflow-wrap: break-word;
 }
 
 .date-card span:not(.date-card-label) {
@@ -277,8 +305,71 @@ a {
 .date-card hr {
   width: 100%;
   border: 0;
-  border-top: 1px solid var(--color-border);
-  margin: 18px 0;
+  border-top: 1px solid rgba(104, 79, 120, 0.14);
+  margin: 16px 0;
+}
+
+.date-card .button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 10px;
+  padding-inline: 14px;
+  border-radius: 16px;
+  border-width: 2px;
+  box-shadow:
+    0 12px 24px rgba(64, 49, 83, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.date-card .button.secondary {
+  color: #33243e;
+}
+
+.date-card > .button.secondary {
+  background: linear-gradient(135deg, #eadcff, #f8f4ff);
+  border-color: rgba(113, 77, 244, 0.46);
+}
+
+.date-card-actions .button.secondary {
+  background: linear-gradient(135deg, #d9f5ff, #f0fbff);
+  border-color: rgba(36, 126, 154, 0.44);
+}
+
+.date-card > .button.secondary:hover,
+.date-card > .button.secondary:focus-visible {
+  background: linear-gradient(135deg, #dfccff, #f4edff);
+  border-color: rgba(113, 77, 244, 0.64);
+}
+
+.date-card-actions .button.secondary:hover,
+.date-card-actions .button.secondary:focus-visible {
+  background: linear-gradient(135deg, #c7efff, #e7f8ff);
+  border-color: rgba(36, 126, 154, 0.62);
+}
+
+.date-card .button.primary {
+  background: linear-gradient(135deg, #714df4, #c14c9f);
+  border-color: rgba(107, 66, 222, 0.34);
+  box-shadow: 0 16px 32px rgba(116, 76, 169, 0.32);
+}
+
+.date-card .button.waze {
+  border-width: 2px;
+  box-shadow:
+    0 12px 24px rgba(40, 153, 190, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.date-card .button.waze:hover,
+.date-card .button.waze:focus-visible {
+  background: linear-gradient(135deg, #cdf3ff, #aee9ff);
+  border-color: rgba(40, 153, 190, 0.58);
+}
+
+.date-card-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
 }
 
 .section {
@@ -398,6 +489,59 @@ p + p {
 .info-box {
   padding: 28px;
   border-radius: var(--radius-lg);
+}
+
+.parking-layout {
+  display: grid;
+  gap: 28px;
+}
+
+.parking-layout .section-heading {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.parking-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 18px;
+}
+
+.parking-panel {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 12px;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(104, 79, 120, 0.16);
+  box-shadow:
+    0 18px 48px rgba(48, 39, 60, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.parking-panel .eyebrow {
+  margin-bottom: 0;
+}
+
+.parking-panel p:not(.eyebrow) {
+  color: var(--color-muted);
+}
+
+.parking-panel .button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 6px;
+  border-radius: 16px;
+}
+
+.parking-panel .button.secondary {
+  background: linear-gradient(135deg, #f1e8ff, #ffffff);
+  color: #33243e;
+  border-color: rgba(113, 77, 244, 0.36);
+  box-shadow: 0 10px 22px rgba(64, 49, 83, 0.1);
 }
 
 .copy-status {
@@ -568,6 +712,10 @@ p + p {
 
   .hero-grid,
   .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .parking-options {
     grid-template-columns: 1fr;
   }
 
