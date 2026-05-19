@@ -33,3 +33,65 @@ if (copyButton && copyStatus) {
     }
   });
 }
+
+const gallery = document.querySelector('.photo-gallery');
+const mobileGalleryQuery = window.matchMedia('(max-width: 560px)');
+const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+let galleryTimer;
+let galleryResumeTimer;
+
+const getMobileGalleryItems = () =>
+  gallery
+    ? Array.from(gallery.querySelectorAll('.photo-portrait')).filter((item) => item.offsetParent !== null)
+    : [];
+
+const stopGalleryRotation = () => {
+  window.clearInterval(galleryTimer);
+  galleryTimer = undefined;
+};
+
+const startGalleryRotation = () => {
+  if (!gallery || !mobileGalleryQuery.matches || reducedMotionQuery.matches) return;
+
+  const items = getMobileGalleryItems();
+  if (items.length < 2) return;
+
+  stopGalleryRotation();
+
+  galleryTimer = window.setInterval(() => {
+    const galleryRect = gallery.getBoundingClientRect();
+    const galleryCenter = galleryRect.left + galleryRect.width / 2;
+    const currentIndex = items.reduce((closestIndex, item, index) => {
+      const itemRect = item.getBoundingClientRect();
+      const closestRect = items[closestIndex].getBoundingClientRect();
+      const currentDistance = Math.abs(itemRect.left + itemRect.width / 2 - galleryCenter);
+      const closestDistance = Math.abs(closestRect.left + closestRect.width / 2 - galleryCenter);
+      return currentDistance < closestDistance ? index : closestIndex;
+    }, 0);
+    const nextItem = items[(currentIndex + 1) % items.length];
+    nextItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }, 4200);
+};
+
+if (gallery) {
+  const pauseGalleryRotation = () => {
+    stopGalleryRotation();
+    window.clearTimeout(galleryResumeTimer);
+    galleryResumeTimer = window.setTimeout(startGalleryRotation, 7000);
+  };
+
+  gallery.addEventListener('pointerdown', pauseGalleryRotation, { passive: true });
+  gallery.addEventListener('wheel', pauseGalleryRotation, { passive: true });
+
+  mobileGalleryQuery.addEventListener('change', () => {
+    stopGalleryRotation();
+    startGalleryRotation();
+  });
+
+  reducedMotionQuery.addEventListener('change', () => {
+    stopGalleryRotation();
+    startGalleryRotation();
+  });
+
+  startGalleryRotation();
+}
