@@ -69,7 +69,8 @@ const startGalleryRotation = () => {
       return currentDistance < closestDistance ? index : closestIndex;
     }, 0);
     const nextItem = items[(currentIndex + 1) % items.length];
-    nextItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    const nextLeft = nextItem.offsetLeft - (gallery.clientWidth - nextItem.clientWidth) / 2;
+    gallery.scrollTo({ left: nextLeft, behavior: 'smooth' });
   }, 4200);
 };
 
