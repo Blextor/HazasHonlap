@@ -7,6 +7,17 @@
   --color-border: rgba(255, 255, 255, 0.74);
   --color-accent: #a25b9f;
   --color-accent-dark: #684f78;
+  --page-background:
+    linear-gradient(
+      180deg,
+      #fff8ef 0%,
+      #ffe1e8 18%,
+      #f3e6ff 36%,
+      #dff3ff 54%,
+      #dcffe8 72%,
+      #fff2be 88%,
+      #ffe2d4 100%
+    );
   --shadow: 0 22px 70px rgba(48, 39, 60, 0.13);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -20,22 +31,15 @@
 }
 
 html {
+  min-height: 100%;
+  background: var(--page-background);
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background:
-    linear-gradient(
-      180deg,
-      #fff8ef 0%,
-      #ffe1e8 18%,
-      #f3e6ff 36%,
-      #dff3ff 54%,
-      #dcffe8 72%,
-      #fff2be 88%,
-      #ffe2d4 100%
-    );
+  min-height: 100vh;
+  background: var(--page-background);
   color: var(--color-text);
   font-size: 16px;
   line-height: 1.65;
