@@ -947,6 +947,11 @@ p + p {
     width: min(100% - 24px, var(--max-width));
   }
 
+  .update-notice {
+    width: 100%;
+    border-radius: 20px;
+  }
+
   .hero-actions,
   .button-row {
     flex-direction: column;
