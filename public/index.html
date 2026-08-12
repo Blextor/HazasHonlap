@@ -37,7 +37,7 @@
           <a href="#kepek">Képek</a>
           <a href="#program">Program</a>
           <a href="#parkolas">Parkolás</a>
-          <a href="#ajandek" hidden>Ajándék</a>
+          <a href="#ajandek">Ajándék</a>
           <a href="#kerdoiv">Kérdőív</a>
           <a href="#kapcsolat">Kapcsolat</a>
         </nav>
@@ -48,6 +48,10 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
+            <p class="update-notice">
+              <span class="update-notice-dot" aria-hidden="true"></span>
+              <span><strong>A honlap frissült 08.12-én.</strong> Frissült a program, az ajándékozás pont bekerült, valamint néhány fontos tudnivalóval is kiegészítettük az oldalt.</span>
+            </p>
             <h1 id="hero-title">
               <span>Brigitta &</span>
               <span>Boldizsár</span>
@@ -177,46 +181,81 @@
             <p class="eyebrow">Program</p>
             <h2>A nap menete</h2>
           </div>
-
-          <div class="timeline" aria-label="Érkezés">
+          <div class="timeline" aria-label="Esküvői program időrendben">
             <div class="timeline-item">
               <time datetime="2026-09-12T14:30">14:30-tól</time>
               <div>
-                <h3>Egyházi szertartás</h3>
-                <p>
-                  Budapest-ferencvárosi Assisi Szent Ferenc-plébániatemplom
-                </p>
+                <h3>Érkezés a templomhoz</h3>
+                <p> Budapest-ferencvárosi Assisi Szent Ferenc-plébániatemplom</p>
               </div>
             </div>
-
-          <div class="timeline" aria-label="Esküvői program időrendben">
             <div class="timeline-item">
               <time datetime="2026-09-12T15:00">15:00-16:00</time>
               <div>
                 <h3>Egyházi szertartás</h3>
-                <p>
-                  Budapest-ferencvárosi Assisi Szent Ferenc-plébániatemplom
-                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T16:00">16:10-ig</time>
+              <div>
+                <h3>Az esküvői kocsi menet gyülekező.</h3>
+                <p>Az indulás helyszíne pontosítás alatt.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T16:30">16:10-16:30</time>
+              <div>
+                <h3>Átvonulás a lagzi helyínére konvolyban</h3>
               </div>
             </div>
             <div class="timeline-item">
               <time datetime="2026-09-12T16:30">16:30-tól</time>
               <div>
                 <h3>Érkezés a Wedding Lake-re</h3>
-                <p>A lakodalom helyszínére érkezés pontos időpontját hamarosan pontosítjuk.</p>
+                <p>Vendégvárás vendég váró falatkákkal.</p>
               </div>
             </div>
             <div class="timeline-item">
               <time datetime="2026-09-12T17:15">17:15-17:45</time>
               <div>
-                <h3>Polgári esküvő a Wedding Lake-en</h3>
+                <h3>A polgári szertartás</h3>
               </div>
             </div>
-          </div>
             <div class="timeline-item">
-              <time datetime="2026-09-12T17:45">17:45</time>
+              <time datetime="2026-09-12T17:45">17:45~18:30</time>
               <div>
                 <h3>Fotózkodás az ifjú párral</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T17:45">18:30-19:15</time>
+              <div>
+                <h3>Fotózkodás az ifjú párral</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T19:15">~19:15-23:30</time>
+              <div>
+                <h3>Vacsora és további programok</h3>
+                <p>Svédasztalos vacsora, beszédek, játékok, nyitótánc, tortázás és buli</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T23:30">~23:30-00:00</time>
+              <div>
+                <h3>Menyecsketánc</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T23:30">00:00-tól</time>
+              <div>
+                <h3>Éjféli büfé és buli</h3>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <time datetime="2026-09-12T19:15">~02:45</time>
+              <div>
+                <h3>Záróra</h3>
               </div>
             </div>
           </div>
@@ -270,18 +309,38 @@
               >Wedding Lake a Waze-ben</a>
             </article>
           </div>
+
+          <aside class="parking-safety-note" aria-labelledby="parking-safety-title">
+            <span class="parking-safety-icon" aria-hidden="true">!</span>
+            <div>
+              <p class="eyebrow">Fontos tudnivaló</p>
+              <h3 id="parking-safety-title">Figyeljetek a tóra!</h3>
+              <p>
+                A helyszínen található egy tó, amelyben tilos fürdeni. Kérjük, a kisgyerekekre különösen figyeljetek, nehogy beleessenek. A gyerekeknek egy kisebb játszótér rendelkezésre áll.
+              </p>
+              <p>
+                A lagzi helyínét egy golfpálya öleli körbe, aminek pályáira tilos rámenni (kifejzetten tűsarkúban). 
+              </p>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="section compact" id="ajandek" hidden>
+      <section class="section compact" id="ajandek">
         <div class="container two-column">
           <div>
             <p class="eyebrow">Ajándék</p>
             <h2>Ajándékozás</h2>
           </div>
           <p>
-            A legnagyobb ajándék, hogy velünk ünnepeltek. Ha mégis szeretnétek
-            hozzájárulni a közös életünk kezdetéhez, borítékos ajándéknak örülünk.
+            Kedves Vendég! Ne fáradjál!<br>
+            Ajándékért ne szaladgálj!<br>
+            Konyhánk teljes, felszerelt már,<br>
+            S nincs más semmi, mire vágynánk.<br>
+            Ha mégis nászajándékot hoznál,<br>
+            Örömöt nekünk borítékkal okoznál.<br>
+            Kerüljön lábasba a táncnál,<br>
+            S váltsa valóra egy új család álmát.
           </p>
         </div>
       </section>
@@ -297,6 +356,9 @@
             </p>
             <p class="deadline">
               Szállást július 15-ig lehet igényelni; utána nem biztos, hogy tudunk szállást biztosítani.
+            </p>
+            <p class="deadline">
+               Frissítés: Szállást már nem tudunk biztosítani, de hogy tudtok-e jönni, illetve fuvar igényeteket még jelezhetitek, ha még nem tettétek meg.
             </p>
             <a
               class="button primary large"
