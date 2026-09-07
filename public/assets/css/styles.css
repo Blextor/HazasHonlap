@@ -873,7 +873,7 @@ p + p {
   margin-top: 26px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1024px) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -900,7 +900,9 @@ p + p {
   .site-nav a {
     padding: 13px 14px;
   }
+}
 
+@media (max-width: 860px) {
   .hero {
     padding: 58px 0 44px;
   }
