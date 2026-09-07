@@ -174,7 +174,7 @@ a {
 }
 
 .hero {
-  padding: 92px 0 64px;
+  padding: 24px 0 64px;
 }
 
 .hero-grid {
@@ -904,7 +904,7 @@ p + p {
 
 @media (max-width: 860px) {
   .hero {
-    padding: 58px 0 44px;
+    padding: 24px 0 44px;
   }
 
   .hero-grid,
